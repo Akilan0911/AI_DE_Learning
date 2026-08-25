@@ -1,0 +1,74 @@
+---
+config:
+  theme: neo
+  layout: fixed
+---
+flowchart LR
+    source["`**Grcery Bag 
+    (Data source)**`"] --> stagingArea["`**Bag 
+    (Staging Area)**`"]
+    stagingArea --> pantry["`**Pantry
+    (Storing)**`"]
+    n8["`**Washing Vegetable 
+    (Data Cleansing)**`"] --> n9["`**Chopping 
+    (Tranformation)**`"]
+    n9 --> n10["`**Cooking
+    (Proessed silver)**`"]
+    n12["`**Tasting 
+    (Quality assurance)**`"] --> n13["`**Buffet 
+    (Aggregated data)**`"]
+    n13 --> n14["`**Shared Dinner
+    (Data Consumption)**`"]
+    n18[" "] --- n19[" "]
+    n20[" "] --- n21[" "]
+    n22[" "] --> n23[" "]
+    n24[" "] --- n25[" "]
+    n26[" "] --- n27[" "]
+    n28[" "] --- n29[" "]
+    n30[" "] --- n31[" "]
+    n32[" "] --> n33[" "]
+    n7["`**Bronze Layer(Raw Data)**`"]
+    n11["`**Silver Layer(Curated Data)**`"]
+    n15["`**Gold Layer(Aggregated Data)**`"]
+
+    n8@{ shape: rect}
+    n9@{ shape: rect}
+    n10@{ shape: rect}
+    n12@{ shape: rect}
+    n13@{ shape: rect}
+    n14@{ shape: rect}
+    n18@{ shape: anchor}
+    n19@{ shape: anchor}
+    n20@{ shape: anchor}
+    n21@{ shape: anchor}
+    n22@{ shape: anchor}
+    n23@{ shape: anchor}
+    n24@{ shape: anchor}
+    n25@{ shape: anchor}
+    n26@{ shape: anchor}
+    n27@{ shape: anchor}
+    n28@{ shape: anchor}
+    n29@{ shape: anchor}
+    n30@{ shape: anchor}
+    n31@{ shape: anchor}
+    n32@{ shape: anchor}
+    n33@{ shape: anchor}
+    n7@{ shape: text}
+    n11@{ shape: text}
+    n15@{ shape: text}
+     n7:::Pine
+     n11:::Pine
+     n15:::Pine
+    classDef Pine stroke-width:1px, stroke-dasharray:none, stroke:#254336, fill:#27654A, color:#FFFFFF
+    style source fill:#FFF9C4,color:#6a2727
+    style stagingArea fill:#FFF9C4,color:#6a2727
+    style pantry fill:#FFF9C4,color:#6a2727
+    style n8 fill:#FFF9C4,color:#6a2727
+    style n9 fill:#FFF9C4,color:#6a2727
+    style n10 fill:#FFF9C4,color:#6a2727
+    style n12 fill:#FFF9C4,color:#6a2727
+    style n13 fill:#FFF9C4,color:#6a2727
+    style n14 fill:#FFF9C4,color:#6a2727
+    style n7 stroke-width:4px,stroke-dasharray: 0,stroke:#6a2727,fill:#6a2727,color:#FFF9C4
+    style n11 stroke-width:4px,stroke-dasharray: 0,stroke:#6a2727,fill:#e6e6e6,color:#FF6D00
+    style n15 stroke-width:4px,stroke-dasharray: 0,stroke:#6a2727,fill:#eef46f,color:#000000
