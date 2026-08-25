@@ -1,0 +1,68 @@
+erDiagram
+    ACCOUNTS {
+        string AccountID
+        string AccountType
+        float Balance
+        int CreditScore
+        string Currency
+        int CustomerID
+    }
+    TRANSACTIONS {
+        string AccountID
+        float Amount
+        string Currency
+        string Description
+        date TransactionDate
+        float TransactionFee
+        int TransactionID
+        string TransactionType
+        string Status
+    }
+    PAYMENTS {
+        float Amount
+        string Currency
+        string CustomerSegment
+        int PaymentID
+        string PaymentType
+        string ToAccountID
+    }
+    CREDITCARD {
+        float Balance
+        string BillCycle
+        string CardID
+        string CardNumber
+        string CardType
+        float CreditLimit
+        int CustomerID
+        date ExpirationDate
+        float InterestRate
+        date IssueDate
+        string Status
+    }
+    DEBTCARD {
+        float Balance
+        string CardID
+        string CardNumber
+        string CardType
+        int CustomerID
+        date ExpirationDate
+        date IssueDate
+        string Status
+    }
+    CUST_PROFILE {
+        string Address
+        int BranchID
+        int CustomerID
+        date DateOfBirth
+        string Email
+        string FirstName
+        string LastName
+        string PhoneNumber
+    }
+    %% Relationships
+    ACCOUNTS ||--o{ TRANSACTIONS : "connected using Account_id"
+    ACCOUNTS ||--o{ PAYMENTS : "check the payment"
+    PAYMENTS ||--o{ CREDITCARD : "payment method"
+    PAYMENTS ||--o{ DEBTCARD : "payment method"
+    ACCOUNTS }o--|| CUST_PROFILE : belongs_to
+    
